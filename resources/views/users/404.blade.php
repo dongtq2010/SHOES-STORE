@@ -1,5 +1,5 @@
 @extends('layouts/master')
-@section('title', 'Sky - Cart')
+@section('title', 'Sky - 404 Error Page')
 @section('content')
     <div class="ps-404 bg--cover" data-background="{{ asset('images/background/404.jpg') }}">
         <div class="ps-404__content">

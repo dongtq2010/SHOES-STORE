@@ -1,5 +1,5 @@
 @extends('layouts/master')
-@section('title', 'Sky - Cart')
+@section('title', 'Sky - About Us')
 @section('content')
 <div class="header--sidebar"></div>
 <header class="header">
