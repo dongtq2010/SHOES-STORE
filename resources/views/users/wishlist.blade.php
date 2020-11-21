@@ -1,5 +1,8 @@
+<!DOCTYPE html>
+<!--[if IE 7]><html class="ie ie7"><![endif]-->
+<!--[if IE 8]><html class="ie ie8"><![endif]-->
 @extends('layouts/master')
-@section('title', 'Sky - Cart')
+@section('title', 'Sky - Whishlist')
 @section('content')
 <div class="header--sidebar"></div>
 <header class="header">
@@ -9,16 +12,16 @@
                 <div class="col-lg-6 col-md-8 col-sm-6 col-xs-12 ">
                     <p>460 West 34th Street, 15th floor, New York  -  Hotline: 804-377-3580 - 804-399-3580</p>
                 </div>
-
                 <div class="col-lg-6 col-md-4 col-sm-6 col-xs-12 ">
                     <div class="header__actions"><a href="#">Login & Regiser</a>
                         <div class="btn-group ps-dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">USD<i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#"><img src="{{ asset('images/flag/usa.svg') }}"> USD</a></li>
-                                <li><a href="#"><img src="{{ asset('images/flag/singapore.svg') }}"> SGD</a></li>
-                                <li><a href="#"><img src="{{ asset('images/flag/japan.svg') }}"> JPN</a></li>
+                                <li><a href="#"><img src="images/flag/usa.svg" alt=""> USD</a></li>
+                                <li><a href="#"><img src="images/flag/singapore.svg" alt=""> SGD</a></li>
+                                <li><a href="#"><img src="images/flag/japan.svg" alt=""> JPN</a></li>
                             </ul>
                         </div>
+
                         <div class="btn-group ps-dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language<i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#">English</a></li>
@@ -35,14 +38,20 @@
     <nav class="navigation">
         <div class="container-fluid">
             <div class="navigation__column left">
-                <div class="header__logo"><a class="ps-logo" href="{{ route('home') }}"><img src="{{ asset('images/logo.png') }}"></a></div>
+                <div class="header__logo">
+                    <a class="ps-logo" href="{{ route('home') }}">
+                        <img src="images/logo.png" alt="">
+                    </a>
+                </div>
             </div>
 
             <div class="navigation__column center">
                 <ul class="main-menu menu">
                     <li class="menu-item menu-item-has-children dropdown"><a href="{{ route('home') }}">Home</a>
                         <ul class="sub-menu">
-                            <li class="menu-item"><a href="{{ route('home') }}">Homepage</a></li>
+                            <li class="menu-item"><a href="{{ route('home') }}">Homepage #1</a></li>
+                            <li class="menu-item"><a href="#">Homepage #2</a></li>
+                            <li class="menu-item"><a href="#">Homepage #3</a></li>
                         </ul>
                     </li>
                     <li class="menu-item menu-item-has-children has-mega-menu"><a href="#">Men</a>
@@ -109,7 +118,6 @@
                     </li>
                     <li class="menu-item"><a href="#">Women</a></li>
                     <li class="menu-item"><a href="#">Kids</a></li>
-
                     <li class="menu-item menu-item-has-children dropdown"><a href="#">News</a>
                         <ul class="sub-menu">
                             <li class="menu-item menu-item-has-children dropdown"><a href="blog-grid.html">Blog-grid</a>
@@ -137,33 +145,25 @@
                         <div class="ps-cart__content">
                             <div class="ps-cart-item">
                                 <a class="ps-cart-item__close" href="#"></a>
-                                <div class="ps-cart-item__thumbnail">
-                                    <a href="product-detail.html"></a><img src="{{ asset('images/cart-preview/1.jpg') }}">
+                                <div class="ps-cart-item__thumbnail"><a href="product-detail.html"></a><img src="images/cart-preview/1.jpg" alt="">
                                 </div>
-                                <div class="ps-cart-item__content">
-                                    <a class="ps-cart-item__title" href="product-detail.html">Amazin’ Glazin’</a>
+                                <div class="ps-cart-item__content"><a class="ps-cart-item__title" href="product-detail.html">Amazin’ Glazin’</a>
                                     <p><span>Quantity:<i>12</i></span><span>Total:<i>£176</i></span></p>
                                 </div>
                             </div>
-
-                            <div class="ps-cart-item"><
-                                <a class="ps-cart-item__close" href="#"></a>
-                                <div class="ps-cart-item__thumbnail">
-                                    <a href="product-detail.html"></a><img src="{{ asset('images/cart-preview/2.jpg') }}">
-                                </div>
-                                <div class="ps-cart-item__content">
-                                    <a class="ps-cart-item__title" href="product-detail.html">The Crusty Croissant</a>
-                                    <p><span>Quantity:<i>12</i></span><span>Total:<i>£176</i></span></p>
-                                </div>
-                            </div>
-
                             <div class="ps-cart-item">
                                 <a class="ps-cart-item__close" href="#"></a>
-                                <div class="ps-cart-item__thumbnail">
-                                    <a href="product-detail.html"></a><img src="{{ asset('images/cart-preview/3.jpg') }}">
+                                <div class="ps-cart-item__thumbnail"><a href="product-detail.html"></a><img src="images/cart-preview/2.jpg" alt="">
                                 </div>
-                                <div class="ps-cart-item__content">
-                                    <a class="ps-cart-item__title" href="product-detail.html">The Rolling Pin</a>
+                                <div class="ps-cart-item__content"><a class="ps-cart-item__title" href="product-detail.html">The Crusty Croissant</a>
+                                    <p><span>Quantity:<i>12</i></span><span>Total:<i>£176</i></span></p>
+                                </div>
+                            </div>
+                            <div class="ps-cart-item">
+                                <a class="ps-cart-item__close" href="#"></a>
+                                <div class="ps-cart-item__thumbnail"><a href="product-detail.html"></a><img src="images/cart-preview/3.jpg" alt="">
+                                </div>
+                                <div class="ps-cart-item__content"><a class="ps-cart-item__title" href="product-detail.html">The Rolling Pin</a>
                                     <p><span>Quantity:<i>12</i></span><span>Total:<i>£176</i></span></p>
                                 </div>
                             </div>
@@ -174,9 +174,7 @@
                             <p>Item Total:<span>£528.00</span></p>
                         </div>
 
-                        <div class="ps-cart__footer">
-                            <a class="ps-btn" href="cart.html">Check out<i class="ps-icon-arrow-left"></i></a>
-                        </div>
+                        <div class="ps-cart__footer"><a class="ps-btn" href="{{ route('cart') }}">Check out<i class="ps-icon-arrow-left"></i></a></div>
                     </div>
                 </div>
 
@@ -197,83 +195,43 @@
 <main class="ps-main">
     <div class="ps-content pt-80 pb-80">
         <div class="ps-container">
-            <div class="ps-cart-listing">
+            <div class="ps-cart-listing ps-table--whishlist">
                 <table class="table ps-cart__table">
                     <thead>
                         <tr>
                             <th>All Products</th>
                             <th>Price</th>
-                            <th>Quantity</th>
-                            <th>Total</th>
+                            <th>View</th>
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><a class="ps-product__preview" href="product-detail.html"><img class="mr-15" src="{{ asset('images/product/cart-preview/1.jpg') }}"> air jordan One mid</a></td>
+                            <td><a class="ps-product__preview" href="product-detail.html"><img class="mr-15" src="images/product/cart-preview/1.jpg" alt=""> air jordan One mid</a></td>
                             <td>$150</td>
-                            <td>
-                                <div class="form-group--number">
-                                    <button class="minus"><span>-</span></button>
-                                    <input class="form-control" type="text" value="2">
-                                    <button class="plus"><span>+</span></button>
-                                </div>
-                            </td>
-                            <td>$300</td>
+                            <td><a class="ps-product-link" href="product-detail.html">View Product</a></td>
                             <td>
                                 <div class="ps-remove"></div>
                             </td>
                         </tr>
                         <tr>
-                            <td><a class="ps-product__preview" href="product-detail.html"><img class="mr-15" src="{{ asset('images/product/cart-preview/2.jpg') }}"> The Crusty Croissant</a></td>
+                            <td><a class="ps-product__preview" href="product-detail.html"><img class="mr-15" src="images/product/cart-preview/2.jpg" alt=""> The Crusty Croissant</a></td>
                             <td>$150</td>
-                            <td>
-                                <div class="form-group--number">
-                                    <button class="minus"><span>-</span></button>
-                                    <input class="form-control" type="text" value="2">
-                                    <button class="plus"><span>+</span></button>
-                                </div>
-                            </td>
-                            <td>$300</td>
+                            <td><a class="ps-product-link" href="product-detail.html">View Product</a></td>
                             <td>
                                 <div class="ps-remove"></div>
                             </td>
                         </tr>
                         <tr>
-                            <td><a class="ps-product__preview" href="product-detail.html"><img class="mr-15" src="{{ asset('images/product/cart-preview/3.jpg') }}">The Rolling Pin</a></td>
+                            <td><a class="ps-product__preview" href="product-detail.html"><img class="mr-15" src="images/product/cart-preview/3.jpg" alt="">The Rolling Pin</a></td>
                             <td>$150</td>
-                            <td>
-                                <div class="form-group--number">
-                                    <button class="minus"><span>-</span></button>
-                                    <input class="form-control" type="text" value="2">
-                                    <button class="plus"><span>+</span></button>
-                                </div>
-                            </td>
-                            <td>$300</td>
+                            <td><a class="ps-product-link" href="product-detail.html">View Product</a></td>
                             <td>
                                 <div class="ps-remove"></div>
                             </td>
                         </tr>
                     </tbody>
                 </table>
-
-                <div class="ps-cart__actions">
-                    <div class="ps-cart__promotion">
-                        <div class="form-group">
-                            <div class="ps-form--icon">
-                                <i class="fa fa-angle-right"></i>
-                                <input class="form-control" type="text" placeholder="Promo Code">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <button class="ps-btn ps-btn--gray">Continue Shopping</button>
-                        </div>
-                    </div>
-
-                    <div class="ps-cart__total">
-                        <h3>Total Price: <span> 2599.00 $</span></h3><a class="ps-btn" href="checkout.html">Process to checkout<i class="ps-icon-next"></i></a>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -402,4 +360,3 @@
     </div>
 </main>
 @endsection
-

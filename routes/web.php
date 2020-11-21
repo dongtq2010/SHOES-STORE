@@ -26,3 +26,38 @@ Route::get('/home', function(){
 Route::get('/cart', function(){
     return view('users.cart');
 })->name('cart');
+
+//Show product's detail
+Route::get('/product-detail', function(){
+    return view('users.product-detail');
+})->name('product-detail');
+
+//Show list of products
+Route::get('/product-list', function(){
+    return view('users.product-listing');
+})->name('product-list');
+
+//Show order detail
+Route::get('/checkout', function(){
+    return view('users.checkout');
+})->name('checkout');
+
+//Show favorite product list
+Route::get('/wishlist', function(){
+    return view('users.wishlist');
+})->name('wishlist');
+
+//Compare products
+Route::get('/compare', function(){
+    return view('users.compare');
+})->name('compare');
+
+//Show company info
+Route::get('/company', function(){
+    return view('users.about');
+})->name('company-info');
+
+//Show 404 page
+Route::get('/404', function(){
+    return view('users.404');
+})->name('notfound');
