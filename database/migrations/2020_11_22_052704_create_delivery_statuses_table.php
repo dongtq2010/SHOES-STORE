@@ -14,7 +14,7 @@ class CreateDeliveryStatusesTable extends Migration
     public function up()
     {
         Schema::create('delivery_statuses', function (Blueprint $table) {
-            $table->bigIncrements('id',11);
+            $table->bigIncrements('id');
             $table->string('status',20);
             $table->timestamps();
         });

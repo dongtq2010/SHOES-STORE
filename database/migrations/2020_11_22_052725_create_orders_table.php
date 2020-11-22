@@ -15,17 +15,17 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->bigIncrements('id',11);
-            $table->unsignedBigInteger('user_id',11);
+            $table->unsignedBigInteger('user_id');
             $table->string('order_code',10);
             $table->datetime('order_date');
-            $table->unsignedBigInteger('ship_address_id',11);
+            $table->unsignedBigInteger('ship_address_id');
             $table->decimal('ship_ammount',10,2);
-            $table->unsignedBigInteger('payment_method_id',11);
-            $table->unsignedBigInteger('delivery_status_id',11);
-            $table->foreign('user_id')->references('users')->on('id')->onDelete('cascade');
-            $table->foreign('ship_address_id')->references('addresses')->on('id')->onDelete('cascade');
-            $table->foreign('payment_method_id')->references('addresses')->on('id')->onDelete('cascade');
-            $table->foreign('ship_address_id')->references('addresses')->on('id')->onDelete('cascade');
+            $table->unsignedBigInteger('payment_method_id');
+            $table->unsignedBigInteger('delivery_status_id');
+            $table->foreign('user_id')->references('id')->on('users')->onUpdate('RESTRICT')->onDelete('CASCADE');
+            $table->foreign('ship_address_id')->references('id')->on('addresses')->onUpdate('RESTRICT')->onDelete('CASCADE');
+            $table->foreign('payment_method_id')->references('id')->on('payment_methods')->onUpdate('RESTRICT')->onDelete('CASCADE');
+            $table->foreign('delivery_status_id')->references('id')->on('delivery_statuses')->onUpdate('RESTRICT')->onDelete('CASCADE');
             $table->timestamps();
         });
     }

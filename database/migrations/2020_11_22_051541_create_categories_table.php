@@ -14,10 +14,10 @@ class CreateCategoriesTable extends Migration
     public function up()
     {
         Schema::create('categories', function (Blueprint $table) {
-            $table->bigIncrements('id',11);
+            $table->bigIncrements('id');
             $table->string('category_name',100);
-            $table->unsignedBigInteger('gender_id',11);
-            $table->foreign('gender_id')->references('genders')->on('id')->onDelete('cascade');
+            $table->unsignedBigInteger('gender_id');
+            $table->foreign('gender_id')->references('id')->on('genders')->onUpdate('RESTRICT')->onDelete('CASCADE');
             $table->timestamps();
         });
     }

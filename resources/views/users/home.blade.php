@@ -40,7 +40,7 @@
 
             <div class="navigation__column center">
                 <ul class="main-menu menu">
-                    <li class="menu-item menu-item-has-children dropdown"><a href="index.html">Home</a>
+                    <li class="menu-item menu-item-has-children dropdown"><a href="{{ route('home') }}">Home</a>
                         <ul class="sub-menu">
                             <li class="menu-item"><a href="{{ route('home') }}">Homepage #1</a></li>
                             <li class="menu-item"><a href="#">Homepage #2</a></li>
@@ -899,5 +899,3 @@
     </div>
 </main>
 @endsection
-
-

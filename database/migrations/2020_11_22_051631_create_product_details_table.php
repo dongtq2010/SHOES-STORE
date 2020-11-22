@@ -14,15 +14,15 @@ class CreateProductDetailsTable extends Migration
     public function up()
     {
         Schema::create('product_details', function (Blueprint $table) {
-            $table->bigIncrements('id',11);
-            $table->unsignedBigInteger('product_id',11);
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('product_id');
             $table->string('size',10);
             $table->string('color',20);
-            $table->unsignedBigInteger('quantity',11);
+            $table->unsignedBigInteger('quantity');
             $table->string('material',50);
             $table->string('product_status',20);
             $table->string('specifications',255);
-            $table->foreign('product_id')->references('products')->on('id')->onDelete('cascade');
+            $table->foreign('product_id')->references('id')->on('products')->onUpdate('RESTRICT')->onDelete('CASCADE');
             $table->timestamps();
         });
     }

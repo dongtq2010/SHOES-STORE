@@ -14,7 +14,7 @@ class CreateCouponsTable extends Migration
     public function up()
     {
         Schema::create('coupons', function (Blueprint $table) {
-            $table->bigIncrements('id',11);
+            $table->bigIncrements('id');
             $table->decimal('discount_amount',10,2);
             $table->datetime('start_date');
             $table->datetime('end_date');

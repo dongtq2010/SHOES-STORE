@@ -14,10 +14,10 @@ class CreateBrandsTable extends Migration
     public function up()
     {
         Schema::create('brands', function (Blueprint $table) {
-            $table->bigIncrements('id',11);
-            $table->unsignedBigInteger('category_id',11);
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('category_id');
             $table->string('brand_name',50);
-            $table->foreign('category_id')->references('categories')->on('id')->onDelete('cascade');
+            $table->foreign('category_id')->references('id')->on('categories')->onUpdate('RESTRICT')->onDelete('CASCADE');
             $table->timestamps();
         });
     }
