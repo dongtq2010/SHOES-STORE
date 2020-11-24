@@ -193,8 +193,16 @@
                                 <input class="form-control" type="text">
                             </div>
                             <div class="form-group form-group--inline">
+                                <label>Company Name<span>*</span></label>
+                                <input class="form-control" type="text">
+                            </div>
+                            <div class="form-group form-group--inline">
                                 <label>Email Address<span>*</span></label>
                                 <input class="form-control" type="email">
+                            </div>
+                            <div class="form-group form-group--inline">
+                                <label>Company Name<span>*</span></label>
+                                <input class="form-control" type="text">
                             </div>
                             <div class="form-group form-group--inline">
                                 <label>Phone<span>*</span></label>

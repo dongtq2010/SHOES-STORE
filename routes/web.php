@@ -60,8 +60,3 @@ Route::get('/company', function(){
 Route::get('/404', function(){
     return view('users.404');
 })->name('notfound');
-
-//Show profile
-Route::get('/profile', function(){
-    return view('users.profile');
-})->name('profile');
