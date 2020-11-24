@@ -7,12 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Category extends Model
 {
     protected $fillable = [
-        'category_id', 'brand_name',
+        'name', 'parent_id',
     ];
-
-    public function gender(){
-        return $this->belongsTo('App\Gender');
-    }
 
     public function brands(){
         return $this->hasMany('App\Brand');

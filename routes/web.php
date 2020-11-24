@@ -11,26 +11,25 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 // Auth::routes();
 
 //Show homepage
-Route::get('/home', function(){
-    return view('users.home');
-})->name('home');
+Route::get('/', 'HomeController@index')->name('home');
+
+//Show product's detail
+Route::get('/product/{id}', 'ProductController@show')->name('product-detail');
+// Route::get('/product-detail', function(){
+//     return view('users.product-detail');
+// })->name('product-detail');
 
 //Show cart
 Route::get('/cart', function(){
     return view('users.cart');
 })->name('cart');
-
-//Show product's detail
-Route::get('/product-detail', function(){
-    return view('users.product-detail');
-})->name('product-detail');
 
 //Show list of products
 Route::get('/product-list', function(){

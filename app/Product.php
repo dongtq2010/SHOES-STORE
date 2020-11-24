@@ -34,4 +34,8 @@ class Product extends Model
         return $this->hasMany('App\ProductDetail');
     }
 
+    // public function getPriceAttribute(){
+    //     return number_format($this->price);
+    // }
+
 }

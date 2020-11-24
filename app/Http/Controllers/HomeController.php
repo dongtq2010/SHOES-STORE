@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Gender;
 use Illuminate\Http\Request;
+use App\Product;
+use DB;
 
-class GenderController extends Controller
+class HomeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +15,18 @@ class GenderController extends Controller
      */
     public function index()
     {
-        //
+        // DB::enableQueryLog();
+        $allProducts = Product::with('images')
+                        ->orderBy('id', 'ASC')
+                        ->take(8)
+                        ->get();
+
+        $saleProducts = Product::with('images','coupons')
+                        ->whereHas('coupons')
+                        ->orderBy('id', 'ASC')
+                        ->get();
+        // dd(DB::getQueryLog());
+        return view('users.home', compact('allProducts','saleProducts'));
     }
 
     /**
@@ -41,10 +53,10 @@ class GenderController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Gender  $gender
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Gender $gender)
+    public function show($id)
     {
         //
     }
@@ -52,10 +64,10 @@ class GenderController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Gender  $gender
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Gender $gender)
+    public function edit($id)
     {
         //
     }
@@ -64,10 +76,10 @@ class GenderController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Gender  $gender
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Gender $gender)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -75,10 +87,10 @@ class GenderController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Gender  $gender
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Gender $gender)
+    public function destroy($id)
     {
         //
     }

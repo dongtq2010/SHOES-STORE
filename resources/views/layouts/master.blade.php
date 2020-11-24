@@ -14,7 +14,7 @@
         <title>@yield('title')</title>
 
         <!-- CSS Library-->
-        {{-- <link rel="stylesheet" href="{{ asset('plugins/bootstrap/dist/css/bootstrap.min.css') }}" > --}}
+        <link rel="stylesheet" href="{{ asset('plugins/bootstrap/dist/css/bootstrap.min.css') }}" >
         <link rel="stylesheet" href="{{ asset('plugins/owl-carousel/assets/owl.carousel.css') }}">
         <link rel="stylesheet" href="{{ asset('plugins/jquery-bar-rating/dist/themes/fontawesome-stars.css') }}">
         <link rel="stylesheet" href="{{ asset('plugins/slick/slick/slick.css') }}">
@@ -29,7 +29,7 @@
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> --}}
 
         <!-- jQuery -->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -94,6 +94,7 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+            @yield('style');
         </style>
     </head>
     <body>
@@ -127,6 +128,6 @@
         <script type="text/javascript" src="{{ asset('plugins/revolution/js/extensions/revolution.extension.actions.min.js') }}"></script>
 
         <!-- Custom scripts-->
-        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
     </body>
 </html>
